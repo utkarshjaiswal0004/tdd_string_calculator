@@ -9,3 +9,6 @@ def test_single_number():
 
 def test_two_numbers():
     assert add("1,2") == 3
+    
+def test_newlines_between_numbers():
+    assert add("1\n2,3") == 6
