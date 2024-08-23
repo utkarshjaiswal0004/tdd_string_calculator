@@ -15,3 +15,7 @@ def test_newlines_between_numbers():
     
 def test_custom_delimiter():
     assert add("//;\n1;2") == 3
+    
+def test_negative_numbers():
+    with pytest.raises(ValueError, match=r"negative numbers not allowed: -1"):
+        add("1,-1")
